@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+
+  }
+
+/* color palette */
+:root{
+--DeepBlue:#003366;
+--SoftGreen: #66CC99;
+--LightGrey: #CCCCCC;
+--WarmBrown: #996633;
+--VibrantOrange: #FF6600;
+--BrightRed: #FF0000;
+}
+body{
+  background: rgba(250, 128, 115, 0.228);
+  overflow-x: hidden;
+}
+
+/* ////////////////////////////////// */
+/* Header  */
+/* ////////////////////////////////// */
+
+nav{
+  margin-top: 20px;
+    height: 100px;
+    background: transparent;
+    width: 100%;
+    grid-area: header;
+    
+
+}
+.wrapper ul{
+    list-style-type: none;
+    margin: 0;
+     padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    /* aling items to the center */
+ 
+}
+
+.wrapper li {
+    margin-right: 1rem;
+}
+
+.wrapper li a {
+  font-size: 1rem;
+    display: block;
+    color: var(--DeepBlue);
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.logo{
+  font-size: 2.5rem !important;
+  font-style: italic;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+
+  
+}
+
+/* ////////////////////////////////// */
+/* Home page style  */
+/* ////////////////////////////////// */
+.container{
+  margin: 20px;
+}
+
+/* introduction section  */
+.intro{
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  grid-area: info;
+}
+.intro h3{
+  font-size: 50px;
+  font-style: oblique;
+  font-weight: lighter;
+}
+
+.intro p{
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: lighter;
+
+}
+.intro button{
+  padding: 20px;
+  background: #66CC99;
+  color: var(--DeepBlue);
+  font-style: oblique;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.intro button:hover{
+  background: pink;
+}
+
+.intro .hero img{
+  margin-top: 50px;
+  height: 40vh;
+  width: 40vh;
+  position: relative;
+}
+
+/* second section of home page */
+.content{
+  height: 100vh;
+  background: #9966331d;
+  color: var(--DeepBlue);
+
+}
+
+.Girl{
+  background-image: url('images/girlHugRemove.png');
+  z-index: 3;
+  height: 45vh;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+}
+
+.content h3{
+  font-size: 3.5rem;
+  font-weight: lighter;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* cards style */
+.card-container {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  top: 10%;
+  width: 70%;
+  
+}
+
+.card{
+  height: 300px;
+  border-radius: 5px;
+}
+
+.card-text{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-text i  {
+  font-size: 3rem;
+}
+.card-text h4{
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.card-text p {
+  font-size: 1rem;
+  width: 70%;
+}
+
+
+/* ////////////////////////////////// */
+/* mobile */
+/* ////////////////////////////////// */
+
+
+@media only screen and (max-width: 1250px) {
+  .wrapper li {
+    margin-right: 1rem;
+}
+
+.wrapper li a {
+  font-size: 1rem;
+  padding: 7px 8px;
+}
+
+.logo{
+  font-size: 2rem !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important; 
+}
+.container{
+  margin: 0;
+}
+
+
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+.wrapper{
+  display: none;
+}
+.intro h3{
+  font-size: 30px;
+  
+}
+
+.intro p{
+  font-size: 15px;
+} 
+
+.intro button{
+  font-size: 15px;
+}
+
+.content{
+  height: fit-content;
+}
+.card-container{
+  display: block;
+  margin: auto;
+  justify-content: center;
+}
+.card-text{
+  justify-content: center;
+}
+.Girl{
+  background-position: center;
+  height: 45vh;
+}
+
+.content h3{
+  font-size: 2.5rem;
+ 
+}
+}
+
+
+
+
+/* ////////////////////////////////// */
+/* Log-in & Sign-up style  */
+/* ////////////////////////////////// */
+.container-log{
+  height: 100vh;
+}
+.signup-container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  /* Form styling */
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--DeepBlue);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--SoftGreen);
+  }
+
+
+/* /////////////////////////////////// */
+  /* footer  */
+/* ///////////////////////////////// */
+  footer {
+    /* background-color: transparent; */
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .left-text,
+  .right-text {
+    flex-basis: 30%;
+  }
+  
+  .center-text {
+    flex-basis: 40%;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #45a049;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3b8540;
+  }
+  
+
+  @media only screen and (max-width: 1000px) {
+    footer {
+      display: block;
+      text-align: center;
+    }
+    
+    .left-text,
+    .right-text {
+      flex-basis: 100%;
+      margin: 10px 0;
+    }
+    
+    .center-text {
+      flex-basis: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+
+/* //////////////////////////////
+services
+///////////////////////////// */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+
+
+/* /////////////////////////////
+our story
+///////////////////////////// */
+
+
+
+
+/* /////////////////////////////
+contact
+///////////////////////////// */
+
+
+
+
+
+/* /////////////////////////////
+reviews
+///////////////////////////// */
+
+
+
+
+
+
+/* /////////////////////////////
+our team
+///////////////////////////// */
+
+
+
+
+
+/* /////////////////////////////
+join  team
+///////////////////////////// */
