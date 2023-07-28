@@ -3,7 +3,9 @@ include_once 'header.php';
 ?>
  <!-- content body    -->
 
-<div class="container-log">
+<div class="container_services">
+
+<div class="services_list">
 
 <table>
   <tr>
@@ -62,6 +64,7 @@ include_once 'header.php';
     <td>90</td>
   </tr>
 </table>
+</div>
 
 
 </div>

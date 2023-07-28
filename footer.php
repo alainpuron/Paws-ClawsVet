@@ -40,8 +40,9 @@
 </footer>
 
 
+<script src="script.js"></script>
+
 
 </body>
 </html>
 
-<script src="script.js"></script>

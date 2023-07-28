@@ -2,23 +2,24 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
 
-  }
+}
 
 /* color palette */
-:root{
---DeepBlue:#003366;
---SoftGreen: #66CC99;
---LightGrey: #CCCCCC;
---WarmBrown: #996633;
---VibrantOrange: #FF6600;
---BrightRed: #FF0000;
+:root {
+  --DeepBlue: #003366;
+  --SoftGreen: #66CC99;
+  --LightGrey: #CCCCCC;
+  --WarmBrown: #996633;
+  --VibrantOrange: #FF6600;
+  --BrightRed: #FF0000;
 }
-body{
+
+body {
   background: rgba(250, 128, 115, 0.228);
   overflow-x: hidden;
 }
@@ -27,59 +28,123 @@ body{
 /* Header  */
 /* ////////////////////////////////// */
 
-nav{
+nav {
   margin-top: 20px;
-    height: 100px;
-    background: transparent;
-    width: 100%;
-    grid-area: header;
-    
+  height: 100px;
+  background: transparent;
+  width: 100%;
+  grid-area: header;
+
 
 }
-.wrapper ul{
-    list-style-type: none;
-    margin: 0;
-     padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center; 
-    /* aling items to the center */
- 
+
+.wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /* aling items to the center */
+
 }
 
 .wrapper li {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .wrapper li a {
   font-size: 1rem;
-    display: block;
-    color: var(--DeepBlue);
-    text-align: center;
-    justify-content: center;
-    margin: auto;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: var(--DeepBlue);
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.logo{
+.logo {
   font-size: 2.5rem !important;
   font-style: italic;
   margin-left: 20px !important;
   margin-right: 20px !important;
 
-  
+
+}
+
+.burgerButton{
+  font-size: 1.5rem;
+  position: absolute;
+  right: 15px;
+  color: var(--SoftGreen);
+  display: none;
+  transition: all .5s ease-in-out;
+}
+
+
+
+.mobileNavigation{
+  margin: 40px;
+  text-align: center;
+  background: rgba(128, 128, 128, 0.303);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 5;
+  position: fixed;
+  display: none;
+}
+
+.mobileNavigation .logo{
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  color: var(--DeepBlue);
+  display: inline-block;
+}
+
+.mobileNavigation ul{
+list-style: none;
+padding: 10px;
+
+}
+
+.mobileNavigation ul li {
+width: 100%;
+margin-bottom: 10px;
+
+}
+
+.mobileNavigation ul li a {
+  text-decoration: none;
+  color: var(--DeepBlue);
+  font-size: 1rem;
+
+}
+
+/* ////////////////////////////////// */
+/* Navigation bar for mobile divices */
+/* ////////////////////////////////// */
+
+
+@media only screen and (max-width: 1000px) {
+  .burgerButton{
+    display: block;
+  }
+
+
 }
 
 /* ////////////////////////////////// */
 /* Home page style  */
 /* ////////////////////////////////// */
-.container{
+.container {
   margin: 20px;
 }
 
 /* introduction section  */
-.intro{
+.intro {
   height: 100vh;
   width: 100%;
   margin: auto;
@@ -88,19 +153,21 @@ nav{
   position: relative;
   grid-area: info;
 }
-.intro h3{
+
+.intro h3 {
   font-size: 50px;
   font-style: oblique;
   font-weight: lighter;
 }
 
-.intro p{
+.intro p {
   font-size: 25px;
   font-style: oblique;
   font-weight: lighter;
 
 }
-.intro button{
+
+.intro button {
   padding: 20px;
   background: #66CC99;
   color: var(--DeepBlue);
@@ -108,11 +175,12 @@ nav{
   margin-top: 20px;
   font-size: 20px;
 }
-.intro button:hover{
+
+.intro button:hover {
   background: pink;
 }
 
-.intro .hero img{
+.intro .hero img {
   margin-top: 50px;
   height: 40vh;
   width: 40vh;
@@ -120,14 +188,14 @@ nav{
 }
 
 /* second section of home page */
-.content{
+.content {
   height: 100vh;
   background: #9966331d;
   color: var(--DeepBlue);
 
 }
 
-.Girl{
+.Girl {
   background-image: url('images/girlHugRemove.png');
   z-index: 3;
   height: 45vh;
@@ -137,7 +205,7 @@ nav{
 
 }
 
-.content h3{
+.content h3 {
   font-size: 3.5rem;
   font-weight: lighter;
   width: 100%;
@@ -154,30 +222,35 @@ nav{
   gap: 10px;
   top: 10%;
   width: 70%;
-  
+
 }
 
-.card{
+.card {
   height: 300px;
   border-radius: 5px;
 }
 
-.card-text{
+.card-text {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.card-text i  {
+
+.card-text i {
   font-size: 3rem;
 }
-.card-text h4{
+
+.card-text h4 {
   font-size: 2rem;
   font-weight: lighter;
 }
+
 .card-text p {
   font-size: 1rem;
   width: 70%;
+  padding-bottom: 30px;
+
 }
 
 
@@ -189,21 +262,22 @@ nav{
 @media only screen and (max-width: 1250px) {
   .wrapper li {
     margin-right: 1rem;
-}
+  }
 
-.wrapper li a {
-  font-size: 1rem;
-  padding: 7px 8px;
-}
+  .wrapper li a {
+    font-size: 1rem;
+    padding: 7px 8px;
+  }
 
-.logo{
-  font-size: 2rem !important;
-  margin-left: 10px !important;
-  margin-right: 10px !important; 
-}
-.container{
-  margin: 0;
-}
+  .logo {
+    font-size: 2rem !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+
+  .container {
+    margin: 0;
+  }
 
 
 
@@ -211,42 +285,47 @@ nav{
 
 
 @media only screen and (max-width: 1000px) {
-.wrapper{
-  display: none;
-}
-.intro h3{
-  font-size: 30px;
+  .wrapper {
+    display: none;
+  }
+
   
-}
+  .intro h3 {
+    font-size: 30px;
 
-.intro p{
-  font-size: 15px;
-} 
+  }
 
-.intro button{
-  font-size: 15px;
-}
+  .intro p {
+    font-size: 15px;
+  }
 
-.content{
-  height: fit-content;
-}
-.card-container{
-  display: block;
-  margin: auto;
-  justify-content: center;
-}
-.card-text{
-  justify-content: center;
-}
-.Girl{
-  background-position: center;
-  height: 45vh;
-}
+  .intro button {
+    font-size: 15px;
+  }
 
-.content h3{
-  font-size: 2.5rem;
- 
-}
+  .content {
+    height: fit-content;
+  }
+
+  .card-container {
+    display: block;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .card-text {
+    justify-content: center;
+  }
+
+  .Girl {
+    background-position: center;
+    height: 45vh;
+  }
+
+  .content h3 {
+    font-size: 2.5rem;
+
+  }
 }
 
 
@@ -255,135 +334,274 @@ nav{
 /* ////////////////////////////////// */
 /* Log-in & Sign-up style  */
 /* ////////////////////////////////// */
-.container-log{
+.container_log {
   height: 100vh;
-}
-.signup-container{
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
 }
 
-h2 {
+.signup-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.151);
+}
+
+.log-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 5px;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.151);
+}
+
+.container_log h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Form styling */
+form {
+  margin-top: 20px;
+
+}
+
+.container_log input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.neutered {
+  display: flex;
+
+}
+
+.neutered input {
+  width: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+
+.container_log input[type='submit'] , .update_pass_container input[type="submit"]
+ {
+  width: 100%;
+  padding: 10px;
+  background: #00336669;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--DeepBlue);
+}
+
+@media only screen and (max-width: 1700px) {
+  .container_log {
+    height: 150vh;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+
+  .container_log {
+    height: 150vh;
+    margin: 10px;
+  }
+
+  .signup-container {
+    max-width: 400px;
+    max-height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.151);
+  }
+
+  .log-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 5px;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.151);
+  }
+
+  .container_log h2 {
     text-align: center;
     margin-top: 0;
   }
-  
+
   /* Form styling */
   form {
     margin-top: 20px;
+
   }
-  
+
+  .container_log input,
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
   label {
     display: block;
     margin-bottom: 5px;
+    display: flex;
   }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
+
+  .neutered {
+    display: flex;
+
+  }
+
+  .neutered input {
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+
+  }
+
+  .container_log input[type='submit'] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
-  }
-  
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--DeepBlue);
+    background: #00336669;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
   }
-  
+
   input[type="submit"]:hover {
-    background-color: var(--SoftGreen);
+    background-color: var(--DeepBlue);
   }
 
+
+
+}
 
 /* /////////////////////////////////// */
-  /* footer  */
+/* footer  */
 /* ///////////////////////////////// */
+footer {
+  /* background-color: transparent; */
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+
+}
+
+.left-text,
+.right-text {
+  flex-basis: 30%;
+}
+
+.center-text {
+  flex-basis: 40%;
+  text-align: center;
+}
+
+button {
+  background-color: #45a049;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b8540;
+}
+
+
+@media only screen and (max-width: 1000px) {
   footer {
-    /* background-color: transparent; */
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-  }
-  
-  .left-text,
-  .right-text {
-    flex-basis: 30%;
-  }
-  
-  .center-text {
-    flex-basis: 40%;
+    display: block;
     text-align: center;
   }
-  
-  button {
-    background-color: #45a049;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #3b8540;
-  }
-  
 
-  @media only screen and (max-width: 1000px) {
-    footer {
-      display: block;
-      text-align: center;
-    }
-    
-    .left-text,
-    .right-text {
-      flex-basis: 100%;
-      margin: 10px 0;
-    }
-    
-    .center-text {
-      flex-basis: 100%;
-      text-align: center;
-      margin: 10px 0;
-    }
+  .left-text,
+  .right-text {
+    flex-basis: 100%;
+    margin: 10px 0;
   }
+
+  .center-text {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
 
 /* //////////////////////////////
 services
 ///////////////////////////// */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
+.container_services {
+  height: 100vh;
 }
 
-th, td {
+.services_list {
+  margin: auto;
+  align-content: center;
+  text-align: center;
+}
+
+.services_list table {
+  margin: auto;
+}
+
+.services_list table th,
+.services_list table td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-th {
+.services_list table th {
   background-color: #f2f2f2;
 }
 
+.services_listtable {
+  width: 100%;
+  border-collapse: collapse;
+}
 
 
+@media only screen and (max-width: 500px) {
+
+  .container_services {
+    height: 150vh;
+  }
+ 
+
+  }
 
 /* /////////////////////////////
 our story
@@ -397,7 +615,73 @@ contact
 ///////////////////////////// */
 
 
+.contact_container{
+  height: 100vh;
+}
+.contact_container h1{
+  margin: auto;
+  text-align: center;
+  font-weight: lighter;
+}
+.form-container{
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+}
 
+.form-container .infoRow{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 40px;
+
+}
+
+
+
+.infoRow label {
+  margin-right: 30px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.infoRow input{
+  margin-left: auto;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px;
+  
+
+
+}
+
+.infoRow textarea{
+  margin-left: auto;
+   max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form-container input[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  background: #00336669;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-container  input[type="submit"]:hover {
+  background-color: var(--DeepBlue);
+}
 
 
 /* /////////////////////////////
@@ -420,3 +704,239 @@ our team
 /* /////////////////////////////
 join  team
 ///////////////////////////// */
+
+
+/* /////////////////////////////
+profile  
+///////////////////////////// */
+
+.profile-container {
+  height: 100vh;
+
+}
+
+.profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  max-width: 500px;
+  max-height: 1000px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  margin-top: 20vh;
+  background: rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+
+}
+
+.profile .profileInformation {
+  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  font-size: 20px;
+
+}
+
+
+.profileInfoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.profileInfoRow span {
+  margin-right: 30px;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.profileInfoRow p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-left: 30px;
+}
+
+.profile img {
+  border-radius: 50%;
+  margin-top: 50px;
+  height: 20vh;
+  width: 20vh;
+  position: relative;
+}
+
+
+.profile .outlinks  {
+  margin-top: 10%;
+  border-radius: 10px;
+
+  background: #00336669;
+  display: block;
+  transition: 0.5s;
+
+}
+
+.outlinks:hover {
+  transition: 0.5s;
+  background: var(--WarmBrown);
+}
+
+.outlinks a  , .update_pass_container a {
+  text-decoration: none;
+  color: white;
+  font: 20px;
+  display: block;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .profile {
+    max-width: 300px;
+    max-height: 1000px;
+    padding: 10px;
+    margin-top: 5vh;
+    background: rgba(0, 0, 0, 0.151);
+    margin: auto;
+
+  }
+
+  .profile .profileInformation {
+    margin-top: 25px;
+    font-size: 15px;
+
+  }
+
+  .profileInfoRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: flex-start;
+
+  }
+
+  .profileInfoRow span {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: left;
+    flex: 1;
+
+  }
+
+  .profileInfoRow p {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: right;
+    flex: 1;
+
+
+  }
+
+  .profile img {
+    margin-top: 30px;
+    height: 15vh;
+    width: 15vh;
+  }
+
+  .outlinks a {
+    text-decoration: none;
+    color: white;
+    font: 20px;
+    display: block;
+    padding: 20px;
+  }
+
+
+}
+
+.outlinks_update input {
+  color: white;
+  font: 20px;
+  display: block;
+  margin-top: 20px;
+  background: #003366;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.outlinks_update input:hover {
+  background: #996633;
+}
+
+.outlinks_update a {
+  text-decoration: none;
+  color: white;
+  font: 20px;
+  display: block;
+  margin-top: 20px;
+  background: #003366;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.outlinks_update a:hover {
+  background: #996633;
+
+
+}
+
+/* /////////////////////////////
+update profile  
+///////////////////////////// */
+
+.update_profile img {
+  border-radius: 50%;
+  /* height: 200px;
+  width: 200px; */
+
+  margin-top: 50px;
+  height: 20vh;
+  width: 20vh;
+  position: relative;
+}
+
+.update_profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  margin-top: 20vh;
+  background: rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+}
+
+.profileInformation input,
+.profileInformation select {
+  background: rgba(255, 255, 255, 0.323);
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+/* /////////////////////////////
+update password  
+///////////////////////////// */
+
+
+.update_pass_container {
+  height: 100vh;
+}
+
+
+
+.update_password {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  max-height: 300px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  margin-top: 20vh;
+  background: rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+
+}
+
